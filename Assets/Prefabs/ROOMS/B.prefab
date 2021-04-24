@@ -823,6 +823,7 @@ GameObject:
   - component: {fileID: 758515932749394748}
   - component: {fileID: 758515932749394751}
   - component: {fileID: 758515932749394750}
+  - component: {fileID: 3017375942376342469}
   m_Layer: 7
   m_Name: TopLeft
   m_TagString: Untagged
@@ -894,6 +895,19 @@ MeshRenderer:
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &758515932749394750
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758515932749394737}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &3017375942376342469
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1866,6 +1880,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5175811183465951455}
   - component: {fileID: 8205297232729083051}
+  - component: {fileID: 44784456325798050}
   m_Layer: 7
   m_Name: BottomSpawner
   m_TagString: Spawn Point
@@ -1900,6 +1915,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openingDir: 2
+--- !u!65 &44784456325798050
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6979075671119367729}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7361140880298380053
 GameObject:
   m_ObjectHideFlags: 0

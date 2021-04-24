@@ -1771,6 +1771,7 @@ GameObject:
   m_Component:
   - component: {fileID: 553774995046801115}
   - component: {fileID: 4916136652615545953}
+  - component: {fileID: 5419188232636720876}
   m_Layer: 7
   m_Name: RightSpawner
   m_TagString: Spawn Point
@@ -1805,6 +1806,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openingDir: 3
+--- !u!65 &5419188232636720876
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5875207990289460494}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7580114693962783628
 GameObject:
   m_ObjectHideFlags: 0
@@ -1815,6 +1829,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2355349997373452481}
   - component: {fileID: 7768354452102033420}
+  - component: {fileID: 3693316348796084782}
   m_Layer: 7
   m_Name: TopSpawner
   m_TagString: Spawn Point
@@ -1849,6 +1864,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openingDir: 1
+--- !u!65 &3693316348796084782
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7580114693962783628}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &9062454401048622929
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6672584394740736082}
   - component: {fileID: 2238024543089806056}
+  - component: {fileID: 7006303927942379750}
   m_Layer: 7
   m_Name: RightSpawner
   m_TagString: Spawn Point
@@ -44,6 +45,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openingDir: 3
+--- !u!65 &7006303927942379750
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774128487528747911}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2273805512616808835
 GameObject:
   m_ObjectHideFlags: 0

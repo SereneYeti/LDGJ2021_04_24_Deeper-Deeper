@@ -105,6 +105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8509508296633092890}
   - component: {fileID: 8258837581049712164}
+  - component: {fileID: 4263280729350282032}
   m_Layer: 7
   m_Name: LeftSpawner
   m_TagString: Spawn Point
@@ -139,6 +140,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openingDir: 4
+--- !u!65 &4263280729350282032
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3361386876154470003}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4360623543537853328
 GameObject:
   m_ObjectHideFlags: 0
