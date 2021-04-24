@@ -10,4 +10,7 @@ public class RoomTemplates : MonoBehaviour
     public GameObject[] LeftRooms;
 
     public GameObject closedRoom;
+    public List<GameObject> rooms;
+
+    public int numRooms = 12;
 }

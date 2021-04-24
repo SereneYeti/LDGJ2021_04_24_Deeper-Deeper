@@ -22,7 +22,7 @@ public class RoomSpawner : MonoBehaviour
     // Update is called once per frame
     void Spawn()
     {
-        if(spawned == false)
+        if(spawned == false && templates.numRooms > 0)
         {
             switch (openingDir)
             {
@@ -31,35 +31,36 @@ public class RoomSpawner : MonoBehaviour
                         //1 -> need bottom door
                         rnd = Random.Range(0, templates.BottomRooms.Length);
                         Instantiate(templates.BottomRooms[rnd], transform.position, templates.BottomRooms[rnd].transform.rotation);
-                        spawned = true;
+                        templates.numRooms--;
                         break;
                     }
                 case 2:
                     {
                         //2 -> need top door
                         rnd = Random.Range(0, templates.TopRooms.Length);
-                        Instantiate(templates.TopRooms[rnd], transform.position, templates.TopRooms[rnd].transform.rotation);
-                        spawned = true;
+                        Instantiate(templates.TopRooms[rnd], transform.position, templates.BottomRooms[rnd].transform.rotation);
+                        templates.numRooms--;
                         break;
                     }
                 case 3:
                     {
                         //3 -> need left door
                         rnd = Random.Range(0, templates.LeftRooms.Length);
-                        Instantiate(templates.LeftRooms[rnd], transform.position, templates.LeftRooms[rnd].transform.rotation);
-                        spawned = true;
+                        Instantiate(templates.LeftRooms[rnd], transform.position, templates.BottomRooms[rnd].transform.rotation);
+                        templates.numRooms--;
                         break;
                     }
                 case 4:
                     {
                         //4 -> need right door
                         rnd = Random.Range(0, templates.RightRooms.Length);
-                        Instantiate(templates.RightRooms[rnd], transform.position, templates.RightRooms[rnd].transform.rotation);
-                        spawned = true;
+                        Instantiate(templates.RightRooms[rnd], transform.position, templates.BottomRooms[rnd].transform.rotation);
+                        templates.numRooms--;
                         break;
                     }
             }
             spawned = true;
+            Destroy(this.gameObject);
         }      
         
     }
@@ -71,7 +72,7 @@ public class RoomSpawner : MonoBehaviour
             if(other.GetComponent<RoomSpawner>().spawned == false && spawned == false)
             {
                 Instantiate(templates.closedRoom, transform.position, Quaternion.identity);
-                //Destroy(gameObject);
+                Destroy(gameObject);
             }
             spawned = true;
         }
