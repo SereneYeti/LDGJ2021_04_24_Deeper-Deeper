@@ -13,7 +13,7 @@ public class RoomSpawner : MonoBehaviour
     private RoomTemplates templates;
     void Start()
     {
-        templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
+        templates = GameObject.FindObjectOfType<RoomTemplates>();
     }
 
     // Update is called once per frame
