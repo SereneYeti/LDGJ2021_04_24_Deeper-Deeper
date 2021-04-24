@@ -22,7 +22,7 @@ public class RoomSpawner : MonoBehaviour
     // Update is called once per frame
     void Spawn()
     {
-        if(!spawned)
+        if(spawned == false)
         {
             switch (openingDir)
             {
@@ -31,6 +31,7 @@ public class RoomSpawner : MonoBehaviour
                         //1 -> need bottom door
                         rnd = Random.Range(0, templates.BottomRooms.Length);
                         Instantiate(templates.BottomRooms[rnd], transform.position, templates.BottomRooms[rnd].transform.rotation);
+                        spawned = true;
                         break;
                     }
                 case 2:
@@ -38,6 +39,7 @@ public class RoomSpawner : MonoBehaviour
                         //2 -> need top door
                         rnd = Random.Range(0, templates.TopRooms.Length);
                         Instantiate(templates.TopRooms[rnd], transform.position, templates.TopRooms[rnd].transform.rotation);
+                        spawned = true;
                         break;
                     }
                 case 3:
@@ -45,6 +47,7 @@ public class RoomSpawner : MonoBehaviour
                         //3 -> need left door
                         rnd = Random.Range(0, templates.LeftRooms.Length);
                         Instantiate(templates.LeftRooms[rnd], transform.position, templates.LeftRooms[rnd].transform.rotation);
+                        spawned = true;
                         break;
                     }
                 case 4:
@@ -52,6 +55,7 @@ public class RoomSpawner : MonoBehaviour
                         //4 -> need right door
                         rnd = Random.Range(0, templates.RightRooms.Length);
                         Instantiate(templates.RightRooms[rnd], transform.position, templates.RightRooms[rnd].transform.rotation);
+                        spawned = true;
                         break;
                     }
             }
@@ -62,7 +66,7 @@ public class RoomSpawner : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("SpawnPoint"))
+        if(other.CompareTag("Spawn Point"))
         {
             if(other.GetComponent<RoomSpawner>().spawned == false && spawned == false)
             {
