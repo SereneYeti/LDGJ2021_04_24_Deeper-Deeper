@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 5f;
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
+    public float _dashTime = 0.30f;    
+    //public float _dashSpeed = 60f;
+    //public float dashDistance = 10f;
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
@@ -15,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 velocity;
     bool isGrounded;
+    //Vector3 lastMoveDir;
     
     // Update is called once per frame
     void Update()
@@ -41,5 +46,17 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * 2 * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+
+        //lastMoveDir = move;
+        //HandleDash();
+
     }
+
+   //private void HandleDash()
+   // {
+   //     if(Input.GetKeyDown(KeyCode.LeftShift))
+   //     {
+   //             transform.position += lastMoveDir * dashDistance;
+   //     }
+   // }
 }
