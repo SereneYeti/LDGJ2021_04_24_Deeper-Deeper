@@ -16,7 +16,8 @@ public class RoomSpawner : MonoBehaviour
     void Start()
     {
         templates = GameObject.FindObjectOfType<RoomTemplates>();
-        Invoke("Spawn", 0.1f);
+        if(!spawned)
+            Invoke("Spawn", 0.1f);
     }
 
     // Update is called once per frame
@@ -29,38 +30,52 @@ public class RoomSpawner : MonoBehaviour
                 case 1:
                     {
                         //1 -> need bottom door
-                        rnd = Random.Range(0, templates.BottomRooms.Length);
-                        Instantiate(templates.BottomRooms[rnd], transform.position, templates.BottomRooms[rnd].transform.rotation);
-                        templates.numRooms--;
+                        if(transform.position != templates.entryRoom.position)
+                        {
+                            rnd = Random.Range(0, templates.BottomRooms.Length);
+                            Instantiate(templates.BottomRooms[rnd], transform.position, templates.BottomRooms[rnd].transform.rotation);
+                            templates.numRooms--;
+                        }
+                       
                         break;
                     }
                 case 2:
                     {
                         //2 -> need top door
-                        rnd = Random.Range(0, templates.TopRooms.Length);
-                        Instantiate(templates.TopRooms[rnd], transform.position, templates.BottomRooms[rnd].transform.rotation);
-                        templates.numRooms--;
+                        if (transform.position != templates.entryRoom.position)
+                        {
+                            rnd = Random.Range(0, templates.TopRooms.Length);
+                            Instantiate(templates.TopRooms[rnd], transform.position, templates.TopRooms[rnd].transform.rotation);
+                            templates.numRooms--;
+                        }
+                           
                         break;
                     }
                 case 3:
                     {
                         //3 -> need left door
-                        rnd = Random.Range(0, templates.LeftRooms.Length);
-                        Instantiate(templates.LeftRooms[rnd], transform.position, templates.BottomRooms[rnd].transform.rotation);
-                        templates.numRooms--;
+                        if (transform.position != templates.entryRoom.position)
+                        {
+                            rnd = Random.Range(0, templates.LeftRooms.Length);
+                            Instantiate(templates.LeftRooms[rnd], transform.position, templates.LeftRooms[rnd].transform.rotation);
+                            templates.numRooms--;
+                        }
+                            
                         break;
                     }
                 case 4:
                     {
                         //4 -> need right door
-                        rnd = Random.Range(0, templates.RightRooms.Length);
-                        Instantiate(templates.RightRooms[rnd], transform.position, templates.BottomRooms[rnd].transform.rotation);
-                        templates.numRooms--;
+                        if (transform.position != templates.entryRoom.position)
+                        {
+                            rnd = Random.Range(0, templates.RightRooms.Length);
+                            Instantiate(templates.RightRooms[rnd], transform.position, templates.RightRooms[rnd].transform.rotation);
+                            templates.numRooms--;
+                        }                            
                         break;
                     }
             }
             spawned = true;
-            Destroy(this.gameObject);
         }      
         
     }
@@ -71,9 +86,9 @@ public class RoomSpawner : MonoBehaviour
         {
             if(other.GetComponent<RoomSpawner>().spawned == false && spawned == false)
             {
-                Instantiate(templates.closedRoom, transform.position, Quaternion.identity);
-                Destroy(gameObject);
+                Instantiate(templates.closedRoom, transform.position, Quaternion.identity);                
             }
+            Destroy(gameObject);
             spawned = true;
         }
     }

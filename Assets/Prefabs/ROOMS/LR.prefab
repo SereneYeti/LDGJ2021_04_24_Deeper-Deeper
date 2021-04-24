@@ -1931,6 +1931,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9069603323508856470}
   - component: {fileID: 9081589925874676956}
+  - component: {fileID: 5976953633101672254}
   m_Layer: 7
   m_Name: LR
   m_TagString: Rooms
@@ -1986,3 +1987,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5976953633101672254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9069603323508856471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9046071106ae904ea34388db4292a87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

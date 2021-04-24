@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RoomTemplates : MonoBehaviour
 {
+    public Transform entryRoom;
     public GameObject[] TopRooms;
     public GameObject[] BottomRooms;
     public GameObject[] RightRooms;
