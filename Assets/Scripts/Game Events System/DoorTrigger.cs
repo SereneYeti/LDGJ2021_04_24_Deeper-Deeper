@@ -16,7 +16,14 @@ public class DoorTrigger : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            //GameEvents.Instance.DoorWayTriggerExit(id);
+            StartCoroutine(WaitCloseDoor());
         }
+    }
+
+    public IEnumerator WaitCloseDoor()
+    {
+        yield return new WaitForSeconds(1f);
+        GameEvents.Instance.DoorWayTriggerExit(id);
+
     }
 }
