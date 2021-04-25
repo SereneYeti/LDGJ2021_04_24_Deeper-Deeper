@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 32515626161270271}
   m_Layer: 7
   m_Name: Cube (2)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 32515626751183977}
   m_Layer: 7
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 32515627286304250}
   m_Layer: 7
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2572,6 +2572,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingPlatfrom_2Points (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 421364759572919226, guid: 55ca6998e67477f40ab6a8fb5134f089, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 421364759897185026, guid: 55ca6998e67477f40ab6a8fb5134f089, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -2680,6 +2684,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingPlatfrom_2Points (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 421364759572919226, guid: 55ca6998e67477f40ab6a8fb5134f089, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 421364759897185026, guid: 55ca6998e67477f40ab6a8fb5134f089, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -2779,6 +2787,10 @@ PrefabInstance:
     - target: {fileID: 421364759572919226, guid: 55ca6998e67477f40ab6a8fb5134f089, type: 3}
       propertyPath: m_Name
       value: MovingPlatfrom_2Points (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 421364759572919226, guid: 55ca6998e67477f40ab6a8fb5134f089, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 421364759897185026, guid: 55ca6998e67477f40ab6a8fb5134f089, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2887,6 +2899,10 @@ PrefabInstance:
     - target: {fileID: 421364759572919226, guid: 55ca6998e67477f40ab6a8fb5134f089, type: 3}
       propertyPath: m_Name
       value: MovingPlatfrom_2Points
+      objectReference: {fileID: 0}
+    - target: {fileID: 421364759572919226, guid: 55ca6998e67477f40ab6a8fb5134f089, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 421364759897185026, guid: 55ca6998e67477f40ab6a8fb5134f089, type: 3}
       propertyPath: m_Materials.Array.data[0]

@@ -11,6 +11,7 @@ TagManager:
   - Lava
   - Stairs
   - Teleporter
+  - Obstacle
   layers:
   - Default
   - TransparentFX

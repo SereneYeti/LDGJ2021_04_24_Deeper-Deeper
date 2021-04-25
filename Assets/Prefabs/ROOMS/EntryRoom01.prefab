@@ -725,7 +725,7 @@ GameObject:
   - component: {fileID: 6844455358997555284}
   m_Layer: 7
   m_Name: Left center Lifter  (2)
-  m_TagString: Rooms
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -820,7 +820,7 @@ GameObject:
   - component: {fileID: 4765595465111769705}
   m_Layer: 7
   m_Name: Left center Lifter  (1)
-  m_TagString: Rooms
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -915,7 +915,7 @@ GameObject:
   - component: {fileID: 4765595465596636320}
   m_Layer: 7
   m_Name: 'Left center Lifter '
-  m_TagString: Rooms
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -26,7 +26,7 @@ public class DoorController : MonoBehaviour
         //Debug.Log("ByeBye");
         if (id == this.id)
         {
-            LeanTween.moveLocalY(gameObject, 2.5f, 2f).setEaseOutQuad();
+            LeanTween.moveLocalY(gameObject, 0f, 2f).setEaseOutQuad();
         }
     }
 
