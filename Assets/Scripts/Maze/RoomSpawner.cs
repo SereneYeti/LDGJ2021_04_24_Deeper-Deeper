@@ -54,7 +54,10 @@ public class RoomSpawner : MonoBehaviour
                             Instantiate(templates.BottomRooms[0], transform.position, templates.BottomRooms[rnd].transform.rotation);
                             templates.numRooms--;
                         }
-
+                        else
+                        {
+                            templates.numRooms--;
+                        }
                         break;
                     }
                 case 2:
@@ -79,7 +82,10 @@ public class RoomSpawner : MonoBehaviour
                             Instantiate(templates.TopRooms[0], transform.position, templates.TopRooms[rnd].transform.rotation);
                             templates.numRooms--;
                         }
-
+                        else
+                        {
+                            templates.numRooms--;
+                        }
                         break;
                     }
                 case 3:
@@ -104,7 +110,10 @@ public class RoomSpawner : MonoBehaviour
                             Instantiate(templates.LeftRooms[0], transform.position, templates.LeftRooms[rnd].transform.rotation);
                             templates.numRooms--;
                         }
-
+                        else
+                        {
+                            templates.numRooms--;
+                        }
                         break;
                     }
                 case 4:
@@ -129,12 +138,15 @@ public class RoomSpawner : MonoBehaviour
                             Instantiate(templates.RightRooms[0], transform.position, templates.RightRooms[rnd].transform.rotation);
                             templates.numRooms--;
                         }
+                        else
+                        {
+                            templates.numRooms--;
+                        }
                         break;
                     }
             }
-            spawned = true;
-        }      
-        
+            spawned = true;            
+        }        
     }
 
     private void OnTriggerEnter(Collider other)

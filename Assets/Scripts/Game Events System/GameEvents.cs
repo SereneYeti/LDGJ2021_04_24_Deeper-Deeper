@@ -42,4 +42,13 @@ public class GameEvents : MonoBehaviour
             onDoorWayTriggerExit(id);
         }
     }
+
+    public event Action onSpawnObstacles;
+    public void SpawnObstaclesTrigger()
+    {
+        if (onDoorWayTriggerExit != null)
+        {
+            onSpawnObstacles();
+        }
+    }
 }
