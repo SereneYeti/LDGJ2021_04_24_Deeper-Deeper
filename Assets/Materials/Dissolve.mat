@@ -67,16 +67,16 @@ Material:
     - _BumpScale: 1
     - _Cull: 2
     - _Cutoff: 0.5
-    - _CutoffHeight: -0.2
+    - _CutoffHeight: 22.1
     - _DstBlend: 0
-    - _EdgeWidth: 0.01
+    - _EdgeWidth: 3.3
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
-    - _NoiseScale: 50.48
-    - _NoiseStrength: 0.42
+    - _NoiseScale: 154.12
+    - _NoiseStrength: 18
     - _OcclusionStrength: 1
     - _QueueOffset: 0
     - _ReceiveShadows: 1
