@@ -8,7 +8,7 @@ public class Destroy_Create : MonoBehaviour
     private void Start()
     {
         LeanTween.moveLocalY(gameObject, 2f, 1f).setEaseOutQuad();
-        //Destroy(gameObject, 4f);
+        Destroy(gameObject, 1);
     }
 
     private void Update()
@@ -29,14 +29,13 @@ public class Destroy_Create : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("is anyone out there!>!!?2");
-        //Destroy(other.gameObject);
-        //if (other.CompareTag("Rooms"))
-        //{
-
-        //    //Instantiate(door, this.transform.position, Quaternion.identity);
-        //}
-    }
+        Debug.Log("is anyone out there!>!!?2");        
+        if (collision.gameObject.CompareTag("Rooms"))
+        {
+            Destroy(collision.gameObject);
+            //Instantiate(door, this.transform.position, Quaternion.identity);
+        }
+    }   
 
 }
    
