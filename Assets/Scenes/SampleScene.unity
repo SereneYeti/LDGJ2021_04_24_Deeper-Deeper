@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.65080994, g: 0.666729, b: 0.7075472, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.05
@@ -262,7 +262,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 653260035}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
   m_Name: 
@@ -1121,6 +1121,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4428995135734618493, guid: 5df99f22f3c54704d81c7a89c7b6816a, type: 3}
+      propertyPath: stairs
+      value: 
+      objectReference: {fileID: 486110753149428335, guid: 46491c625f786f94b9edd1f7b28a1a79, type: 3}
+    - target: {fileID: 4428995135734618493, guid: 5df99f22f3c54704d81c7a89c7b6816a, type: 3}
+      propertyPath: waitTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428995135734618493, guid: 5df99f22f3c54704d81c7a89c7b6816a, type: 3}
+      propertyPath: entryRoom
+      value: 
+      objectReference: {fileID: 1902901709}
+    - target: {fileID: 4428995135734618493, guid: 5df99f22f3c54704d81c7a89c7b6816a, type: 3}
+      propertyPath: closedRoom
+      value: 
+      objectReference: {fileID: 6999823054724134946, guid: dd90fb4525e3d5848ba7974af1a51e5c, type: 3}
     - target: {fileID: 4428995135734618493, guid: 5df99f22f3c54704d81c7a89c7b6816a, type: 3}
       propertyPath: TopRooms.Array.size
       value: 4
