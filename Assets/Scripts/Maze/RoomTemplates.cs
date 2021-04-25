@@ -34,8 +34,8 @@ public class RoomTemplates : MonoBehaviour
     }
     public void CreateStairs()
     {
-        Debug.Log("test");
-        Debug.Log(spawnedStairs);
+        //Debug.Log("test");
+        //Debug.Log(spawnedStairs);
         //Debug.Log(waitTime);
         if (spawnedStairs == false)
         {
@@ -48,7 +48,7 @@ public class RoomTemplates : MonoBehaviour
                     Instantiate(stairs, rooms[i].transform.position, Quaternion.identity);
                     spawnedStairs = true;
                     GameEvents.Instance.SpawnObstaclesTrigger();
-                    Debug.Log("I Did it!");
+                    //Debug.Log("I Did it!");
 
                 }
             }
