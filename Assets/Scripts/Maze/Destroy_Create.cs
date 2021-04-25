@@ -7,8 +7,14 @@ public class Destroy_Create : MonoBehaviour
     public GameObject door;
     private void Start()
     {
-        LeanTween.moveLocalY(gameObject, 8f, 1f).setEaseOutQuad();
+        LeanTween.moveLocalY(gameObject, 100f, 1f).setEaseOutQuad();
         //Destroy(gameObject, 4f);
+    }
+
+    private void Update()
+    {
+        LeanTween.moveLocalY(gameObject, 1f, 2f).setEaseInOutQuad();
+  
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -20,6 +26,7 @@ public class Destroy_Create : MonoBehaviour
         //    //Instantiate(door, this.transform.position, Quaternion.identity);
         //}
     }
+
 }
    
 
