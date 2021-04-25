@@ -18,6 +18,12 @@ public class Destroyer : MonoBehaviour
     private void Start()
     {
         tutScreen = GetComponent<Canvas>();
+        Invoke("DoStairs", 5f);
+    }
+
+    private void DoStairs()
+    {
+        FindObjectOfType<RoomTemplates>().CreateStairs();
     }
     private void Update()
     {
