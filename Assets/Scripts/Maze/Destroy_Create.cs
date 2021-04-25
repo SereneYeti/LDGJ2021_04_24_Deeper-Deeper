@@ -29,7 +29,7 @@ public class Destroy_Create : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("is anyone out there!>!!?2");        
+        //Debug.Log("is anyone out there!>!!?2");        
         if (collision.gameObject.CompareTag("Rooms"))
         {
             Destroy(collision.gameObject);
