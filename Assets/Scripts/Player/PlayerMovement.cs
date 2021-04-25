@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public float sprintingSpeed = 12f;
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
-    public float _dashTime = 0.30f;
+    //public float _dashTime = 0.30f;
     //public float _dashSpeed = 60f;
     //public float dashDistance = 10f;
 
