@@ -8,6 +8,9 @@ TagManager:
   - Rooms
   - Door
   - Destroy
+  - Lava
+  - Stairs
+  - Teleporter
   layers:
   - Default
   - TransparentFX
