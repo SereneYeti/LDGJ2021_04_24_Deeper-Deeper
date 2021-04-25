@@ -33,7 +33,7 @@ public class RoomTemplates : MonoBehaviour
             {
                 if (i == rooms.Count-1)
                 {
-
+                    DestroyCenter(i);
                     Instantiate(stairs, rooms[i].transform.position, Quaternion.identity);
                     spawnedStairs = true;
 
@@ -44,6 +44,12 @@ public class RoomTemplates : MonoBehaviour
         {
             waitTime -= Time.deltaTime;
         }
+    }
+
+    public void DestroyCenter(int i)
+    {
+        GameObject go = rooms[i].transform.Find("Center").gameObject;
+        Destroy(go);
     }
 }
 
