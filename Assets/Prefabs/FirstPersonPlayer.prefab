@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  walkspeed: 9
+  walkspeed: 7
   sprintSpeed: 78
   sprintingSpeed: 12
   jumpHeight: 8
