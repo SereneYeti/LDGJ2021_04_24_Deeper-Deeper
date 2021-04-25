@@ -25,7 +25,7 @@ public class RoomTemplates : MonoBehaviour
     private void Start()
     {
         //Debug.Log("test");
-        Invoke("CreateStairs", 3f);
+        Invoke("CreateStairs", 2f);
     }
 
     private void Update()

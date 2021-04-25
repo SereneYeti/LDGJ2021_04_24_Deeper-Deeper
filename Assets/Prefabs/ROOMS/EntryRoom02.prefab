@@ -258,7 +258,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 972090174494351270}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -2423,7 +2423,7 @@ GameObject:
   - component: {fileID: 8487257332560073069}
   - component: {fileID: 5392049695215364242}
   m_Layer: 7
-  m_Name: Entry Room 03
+  m_Name: EntryRoom02
   m_TagString: Rooms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
