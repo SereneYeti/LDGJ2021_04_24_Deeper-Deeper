@@ -1057,7 +1057,7 @@ PrefabInstance:
       objectReference: {fileID: 486110753149428335, guid: 46491c625f786f94b9edd1f7b28a1a79, type: 3}
     - target: {fileID: 4428995135734618493, guid: 5df99f22f3c54704d81c7a89c7b6816a, type: 3}
       propertyPath: numRooms
-      value: 20
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4428995135734618493, guid: 5df99f22f3c54704d81c7a89c7b6816a, type: 3}
       propertyPath: waitTime
