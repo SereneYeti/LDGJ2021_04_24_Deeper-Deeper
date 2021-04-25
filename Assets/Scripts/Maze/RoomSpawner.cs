@@ -104,7 +104,7 @@ public class RoomSpawner : MonoBehaviour
                             Instantiate(templates.LeftRooms[rnd], transform.position, templates.LeftRooms[rnd].transform.rotation);
                             templates.numRooms--;
                         }
-                        else if (transform.position != templates.entryRoom.position && spawned == false && templates.numRooms == 1)
+                        else if (transform.position != templates.entryRoom.position && spawned == false && templates.numRooms == 1)  //spawns a room at the one door 
                         {
                             rnd = Random.Range(0, templates.LeftRooms.Length);
                             Instantiate(templates.LeftRooms[0], transform.position, templates.LeftRooms[rnd].transform.rotation);
