@@ -21,9 +21,14 @@ public class RoomTemplates : MonoBehaviour
     private bool spawnedStairs;
     public GameObject stairs;
 
+    private void Start()
+    {
+        Invoke("CreateStairs", 5f);
+    }
+
     private void Update()
     {
-        CreateStairs();
+        
     }
     public void CreateStairs()
     {
