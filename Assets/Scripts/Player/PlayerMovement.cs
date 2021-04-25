@@ -5,16 +5,13 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public CharacterController controller;
+    public Rigidbody rb;
+   // public CharacterController controller;
     public float speed = 5f;
     public float walkspeed = 5;
     public float sprintSpeed = 8f;
     public float sprintingSpeed = 12f;
-    public float gravity = -9.81f;
     public float jumpHeight = 3f;
-    public float _dashTime = 0.30f;
-    //public float _dashSpeed = 60f;
-    //public float dashDistance = 10f;
 
 
     //movement 
@@ -24,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
-    public float jVelocity;
+ 
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
@@ -38,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();   
     }
     // Update is called once per frame
     void Update()
@@ -50,16 +47,21 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = -2f;
         }
 
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        //Input
+        float x = Input.GetAxisRaw("Horizontal") * speed;
+        float y = Input.GetAxisRaw("Vertical") * speed;
 
-        Vector3 move = transform.right * x + transform.forward * z;
 
-        //walking & Sprinting 
-        controller.Move(move * speed * Time.deltaTime);
+        //Movement
+
+        Vector3 movePos = transform.right * x + transform.forward * y;
+        Vector3 newMovePos = new Vector3(movePos.x, rb.velocity.y, movePos.z);
+        rb.velocity = newMovePos;
+ 
+       // controller.Move(movePos * speed * Time.deltaTime);
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            Debug.Log("Sprinting");
+
             speed = sprintSpeed;
         }
         else
@@ -97,23 +99,23 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
+            rb.velocity = new Vector3(rb.velocity.x, jumpHeight, rb.velocity.y);
         }
 
       
-        if (velocity.y < 0)
+        if (rb.velocity.y < 0)
         {
-            velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+            rb.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
-        else if (velocity.y > 0 && !Input.GetButton("Jump"))
+        else if (rb.velocity.y > 0 && !Input.GetButton("Jump"))
         {
 
-            velocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+            rb.velocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
 
-     velocity.y += gravity * 2 * Time.deltaTime;
 
-        controller.Move(velocity * Time.deltaTime);
+
+      
 
         //lastMoveDir = move;
         //HandleDash();

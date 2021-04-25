@@ -983,8 +983,12 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2035704405497742782, guid: 8b3e5fde6203d674e893c92958b9c282, type: 3}
-      propertyPath: sprintSpeed
+      propertyPath: walkspeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035704405497742782, guid: 8b3e5fde6203d674e893c92958b9c282, type: 3}
+      propertyPath: sprintSpeed
+      value: 78
       objectReference: {fileID: 0}
     - target: {fileID: 2035704405497742783, guid: 8b3e5fde6203d674e893c92958b9c282, type: 3}
       propertyPath: m_RootOrder

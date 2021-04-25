@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Destroyer : MonoBehaviour
 {
-    public Canvas tutScreen;
+    Canvas tutScreen;
 
     private void OnTriggerEnter(Collider other)
     {
