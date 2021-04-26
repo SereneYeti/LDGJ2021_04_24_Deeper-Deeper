@@ -532,11 +532,13 @@ PrefabInstance:
         Space Bar: Jump
 
         Shift:
-        Boost'
+        Boost
+
+        Escape: return to main menu'
       objectReference: {fileID: 0}
     - target: {fileID: 1326038250448412429, guid: ab10d0b5c4e713440ae2d75777d63974, type: 3}
       propertyPath: m_fontSize
-      value: 46.25
+      value: 36.65
       objectReference: {fileID: 0}
     - target: {fileID: 1326038250448412429, guid: ab10d0b5c4e713440ae2d75777d63974, type: 3}
       propertyPath: m_fontAsset

@@ -101,8 +101,8 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _FlowSpeed: 0.01
-    - _FlowStrength: 0.0075
+    - _FlowSpeed: 0.06
+    - _FlowStrength: 9.6
     - _FoamDistance: 36.9
     - _GlossMapScale: 0
     - _Glossiness: 0
@@ -114,7 +114,7 @@ Material:
     - _Parallax: 0.02
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Size: 1032.05
+    - _Size: 8500
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1

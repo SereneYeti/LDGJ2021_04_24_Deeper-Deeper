@@ -14,8 +14,8 @@ public class MenuController : MonoBehaviour
     public TextMeshProUGUI txtPlay;
     public Button btnQuit;
     public TextMeshProUGUI txtQuit;   
-    public Button btnInstructions;
-    public TextMeshProUGUI txtInstructions;   
+    //public Button btnInstructions;
+    //public TextMeshProUGUI txtInstructions;   
     public TextMeshProUGUI txtInstructionsMessage;
     public Slider seedSlider;
     public TextMeshProUGUI seedText;
@@ -25,7 +25,7 @@ public class MenuController : MonoBehaviour
     {
         btnPlay.onClick.AddListener(this.PlayGame);
         btnQuit.onClick.AddListener(this.QuitGame);
-        btnInstructions.onClick.AddListener(this.ShowInstructions);
+        //btnInstructions.onClick.AddListener(this.ShowInstructions);
         //btnViewHighScore.onClick.AddListener(this.DisplayScores);
         Back();
         SetVisibility(true, 0);
@@ -78,7 +78,7 @@ public class MenuController : MonoBehaviour
                 { //Main Menu
                     btnPlay.gameObject.SetActive(vis);
                     btnQuit.gameObject.SetActive(vis);
-                    btnInstructions.gameObject.SetActive(vis);
+                    //btnInstructions.gameObject.SetActive(vis);
                     txtInstructionsMessage.gameObject.SetActive(vis);
                     break;
                 }

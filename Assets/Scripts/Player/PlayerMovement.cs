@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -132,6 +133,11 @@ public class PlayerMovement : MonoBehaviour
 
         //lastMoveDir = move;
         //HandleDash();
+        if (Input.GetKey(KeyCode.Escape))
+        {
+
+            SceneManager.LoadScene(0);
+        }
 
     }
 
