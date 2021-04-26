@@ -126,15 +126,15 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_189eb4680437425eae4af198fda0f346: {r: 9.887218, g: 2.3810134, b: 0, a: 0}
+    - Color_189eb4680437425eae4af198fda0f346: {r: 11.313708, g: 0.35493988, b: 0, a: 0}
     - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - _DarkFoamColor: {r: 0.31132078, g: 0.024338458, b: 0, a: 1}
+    - _DarkFoamColor: {r: 0.9467213, g: 1, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FoamColor: {r: 1, g: 1, b: 1, a: 1}
-    - _LightFoamColor: {r: 1, g: 0.75608957, b: 0.06132078, a: 1}
+    - _LightFoamColor: {r: 1, g: 0, b: 0.1030879, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _WaterColor: {r: 0.81960785, g: 0.07673692, b: 0, a: 1}
+    - _WaterColor: {r: 1, g: 0.13361812, b: 0, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &525813983808830983
 MonoBehaviour:
