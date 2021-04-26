@@ -438,6 +438,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3816451978563518050, guid: 58b1d9ac4fd59cb4aa6de04222030724, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 3816451978563518050, guid: 58b1d9ac4fd59cb4aa6de04222030724, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -346
+      objectReference: {fileID: 0}
     - target: {fileID: 4736122382435604063, guid: 58b1d9ac4fd59cb4aa6de04222030724, type: 3}
       propertyPath: seedText
       value: 
@@ -468,9 +476,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6722935694834901440, guid: 58b1d9ac4fd59cb4aa6de04222030724, type: 3}
       propertyPath: m_text
-      value: 'Depth
-
-'
+      value: Seed
       objectReference: {fileID: 0}
     - target: {fileID: 6722935694834901440, guid: 58b1d9ac4fd59cb4aa6de04222030724, type: 3}
       propertyPath: m_HorizontalAlignment
@@ -481,12 +487,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 7231050205844537337, guid: 58b1d9ac4fd59cb4aa6de04222030724, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7231050205844537337, guid: 58b1d9ac4fd59cb4aa6de04222030724, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.00007085096
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 7231050205844537337, guid: 58b1d9ac4fd59cb4aa6de04222030724, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 131
       objectReference: {fileID: 0}
     - target: {fileID: 7231050206661376672, guid: 58b1d9ac4fd59cb4aa6de04222030724, type: 3}
       propertyPath: m_Pivot.x
@@ -578,7 +588,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7471550815651745423, guid: 58b1d9ac4fd59cb4aa6de04222030724, type: 3}
       propertyPath: m_Name
-      value: tmp_txtDepth
+      value: tmp_txtSeed
       objectReference: {fileID: 0}
     - target: {fileID: 7941064954968141453, guid: 58b1d9ac4fd59cb4aa6de04222030724, type: 3}
       propertyPath: m_Name
