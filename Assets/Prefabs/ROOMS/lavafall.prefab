@@ -2144,6 +2144,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6221247799796942232}
   - component: {fileID: 7587136948415888487}
+  - component: {fileID: 4980084829086800719}
   m_Layer: 7
   m_Name: lavafall
   m_TagString: Rooms
@@ -2205,6 +2206,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9046071106ae904ea34388db4292a87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4980084829086800719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6221247799796942233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2a0e152f22f8094a8c30078e6c5bb44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorTop: {fileID: 5367959730119165614}
+  doorBotton: {fileID: 2688507746691318020}
+  doorLeft: {fileID: 8982341458832122697}
+  doorRight: {fileID: 1881587721680294179}
 --- !u!1 &6221247799939897797
 GameObject:
   m_ObjectHideFlags: 0

@@ -46,9 +46,17 @@ public class GameEvents : MonoBehaviour
     public event Action onSpawnObstacles;
     public void SpawnObstaclesTrigger()
     {
-        if (onDoorWayTriggerExit != null)
+        if (onSpawnObstacles != null)
         {
             onSpawnObstacles();
+        }
+    }
+    public event Action<string, Vector3> onDoorsActivate;
+    public void DoorActivate(string id, Vector3 pos)
+    {
+        if (onDoorsActivate != null)
+        {
+            onDoorsActivate(id, pos);
         }
     }
 }

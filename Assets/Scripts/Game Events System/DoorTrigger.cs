@@ -7,17 +7,17 @@ public class DoorTrigger : MonoBehaviour
     public int id;
     private void OnTriggerEnter(Collider other)
     {
-        //if(other.gameObject.CompareTag("Player"))
-        //{
-        //    GameEvents.Instance.DoorwayTriggerEnter(id);
-        //}
+        if (other.gameObject.CompareTag("Player"))
+        {
+            GameEvents.Instance.DoorwayTriggerEnter(id);
+        }
     }
     private void OnTriggerExit(Collider other)
     {
-        //if (other.gameObject.CompareTag("Player"))
-        //{
-        //    StartCoroutine(WaitCloseDoor());
-        //}
+        if (other.gameObject.CompareTag("Player"))
+        {
+            StartCoroutine(WaitCloseDoor());
+        }
     }
 
     public IEnumerator WaitCloseDoor()
