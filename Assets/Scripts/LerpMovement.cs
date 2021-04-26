@@ -5,7 +5,8 @@ using UnityEngine;
 public class LerpMovement : MonoBehaviour
 {
     public Rigidbody wall;
-    
+
+    public Shader shaderShift;
     public Vector3 endPos;
     public Vector3 startPos;
     private float distance = 30f;
@@ -24,7 +25,7 @@ public class LerpMovement : MonoBehaviour
 
     private void Update()
     {
-        MovingObjects();
+       // MovingObjects();
     }
 
     public void MovingObjects()
