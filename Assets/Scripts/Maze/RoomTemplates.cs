@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,7 +17,7 @@ public class RoomTemplates : MonoBehaviour
 
     //Values for the last room 
     public float waitTime;
-    private bool spawnedStairs = false;
+    public bool spawnedStairs = false;
     public GameObject stairs;
 
     private void Start()
@@ -63,6 +61,13 @@ public class RoomTemplates : MonoBehaviour
     {
         GameObject go = rooms[i].transform.Find("Center").gameObject;
         Destroy(go);
+    }
+    public void DestroyObsCenter(int i)
+    {
+        Debug.Log(obstacles[i].transform.Find("Center").gameObject);
+        GameObject go = obstacles[i].transform.Find("Center").gameObject;
+        //Destroy(go);
+        go.SetActive(false);
     }
 }
 

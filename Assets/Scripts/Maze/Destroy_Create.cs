@@ -5,10 +5,11 @@ using UnityEngine;
 public class Destroy_Create : MonoBehaviour
 {
     public GameObject door;
+    public float waitTime = 1f;
     private void Start()
     {
         LeanTween.moveLocalY(gameObject, 2f, 1f).setEaseOutQuad();
-        Destroy(gameObject, 1);
+        Destroy(gameObject, waitTime);
     }
 
     private void Update()
