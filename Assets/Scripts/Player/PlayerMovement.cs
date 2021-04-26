@@ -5,9 +5,13 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-     Rigidbody rb;
-   // public CharacterController controller;
+    Rigidbody rb;
+    //public CharacterController controller;
+    public float gravity = -9.81f;
+
     public float speed = 5f;
+
+
     public float walkspeed = 5;
     public float sprintSpeed = 8f;
     public float sprintingSpeed = 12f;
@@ -16,12 +20,12 @@ public class PlayerMovement : MonoBehaviour
 
     //movement 
     KeyCode codes;
-   public  float startTime;
-    //Jump setting 
-    
-    public float fallMultiplier = 2.5f;
-    public float lowJumpMultiplier = 2f;
- 
+    public float startTime;
+    //Jump setting
+
+     public float fallMultiplier = 2.5f;
+     public float lowJumpMultiplier = 2f;
+
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
@@ -29,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 velocity;
     bool isGrounded;
-    //Vector3 lastMoveDir;
+    Vector3 lastMoveDir;
 
 
 
@@ -58,7 +62,17 @@ public class PlayerMovement : MonoBehaviour
         Vector3 newMovePos = new Vector3(movePos.x, rb.velocity.y, movePos.z);
         rb.velocity = newMovePos;
  
-       // controller.Move(movePos * speed * Time.deltaTime);
+        //controller.Move(movePos * speed * Time.deltaTime);
+
+        //velocity.y += gravity*2 * Time.deltaTime;
+        //controller.Move(velocity * Time.deltaTime);
+
+
+        //if (Input.GetButtonDown("Jump") && isGrounded)
+        //{
+        //    velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
+        //}
+
         if (Input.GetKey(KeyCode.LeftShift))
         {
 
@@ -69,10 +83,10 @@ public class PlayerMovement : MonoBehaviour
             speed = walkspeed;
         }
 
-
+        #region rb code
         switch (codes)
         {
-           
+
             case KeyCode.W:
                 startTime = Time.time;
                 if (startTime < 2f)
@@ -94,15 +108,15 @@ public class PlayerMovement : MonoBehaviour
                 startTime = Time.time;
                 break;
         }
-        //Adjusitng the fall multiplier for better jumps 
+        //Adjusitng the fall multiplier for better jumps
 
 
         if (Input.GetButtonDown("Jump") && isGrounded)
-        {
-            rb.velocity = new Vector3(rb.velocity.x, jumpHeight, rb.velocity.y);
-        }
+            {
+                rb.velocity = new Vector3(rb.velocity.x, jumpHeight, rb.velocity.y);
+            }
 
-      
+
         if (rb.velocity.y < 0)
         {
             rb.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
@@ -112,10 +126,8 @@ public class PlayerMovement : MonoBehaviour
 
             rb.velocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
+        #endregion
 
-
-
-      
 
         //lastMoveDir = move;
         //HandleDash();
