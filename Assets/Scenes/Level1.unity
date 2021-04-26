@@ -807,6 +807,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 923862012, guid: cfa90fc00fe8a5b49ae60c77e15f16f7, type: 3}
+      propertyPath: mouseSensitivity
+      value: 750
+      objectReference: {fileID: 0}
     - target: {fileID: 8340294707892503788, guid: cfa90fc00fe8a5b49ae60c77e15f16f7, type: 3}
       propertyPath: m_Name
       value: FirstPersonPlayer Variant
@@ -865,7 +869,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8340294707892503795, guid: cfa90fc00fe8a5b49ae60c77e15f16f7, type: 3}
       propertyPath: sprintSpeed
-      value: 85
+      value: 75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfa90fc00fe8a5b49ae60c77e15f16f7, type: 3}
