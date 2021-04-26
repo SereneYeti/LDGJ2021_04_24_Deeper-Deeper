@@ -18,7 +18,7 @@ public class Destroy_Create : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("is anyone out there!>!!?1");
+       // Debug.Log("is anyone out there!>!!?1");
         //Destroy(other.gameObject);
         //if (other.CompareTag("Rooms"))
         //{
