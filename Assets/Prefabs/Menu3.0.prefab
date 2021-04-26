@@ -752,7 +752,7 @@ MonoBehaviour:
 
     Shift: Boost
 
-    Escape:
+    M:
     return to main menu'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -780,7 +780,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36.65
+  m_fontSize: 37
   m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1737,8 +1737,6 @@ MonoBehaviour:
   txtPlay: {fileID: 1326038249542078723}
   btnQuit: {fileID: 1326038250077667164}
   txtQuit: {fileID: 1326038249235640908}
-  btnInstructions: {fileID: 0}
-  txtInstructions: {fileID: 0}
   txtInstructionsMessage: {fileID: 1326038250448412429}
   seedSlider: {fileID: 4536447828146663312}
   seedText: {fileID: 0}

@@ -133,7 +133,7 @@ public class PlayerMovement : MonoBehaviour
 
         //lastMoveDir = move;
         //HandleDash();
-        if (Input.GetKey(KeyCode.Escape))
+        if (Input.GetKey(KeyCode.M))
         {
 
             SceneManager.LoadScene(0);
