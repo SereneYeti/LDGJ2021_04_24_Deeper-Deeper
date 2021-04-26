@@ -39,6 +39,7 @@ public class Teleport : MonoBehaviour
         if(SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(1))
         {
             //SceneManager.UnloadSceneAsync(1);
+            gameManager.Instance.depth++;
             SceneManager.LoadScene(1);            
         }
         //if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(2))

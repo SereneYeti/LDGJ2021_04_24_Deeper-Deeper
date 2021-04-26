@@ -49,7 +49,7 @@ public class MenuController : MonoBehaviour
     }
     private void Update()
     {
-        seedText.text = "Seed: " + Mathf.RoundToInt(seedSlider.value);
+        seedText.text = "Depth: " + Mathf.RoundToInt(seedSlider.value);
 
     }
     void Back()
@@ -61,6 +61,7 @@ public class MenuController : MonoBehaviour
     public void PlayGame()
     {          
         Debug.Log("HI");
+        gameManager.Instance.depth = Mathf.RoundToInt(seedSlider.value);
         SceneManager.LoadScene(1);     
     }
     public void QuitGame()

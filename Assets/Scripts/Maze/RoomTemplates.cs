@@ -13,7 +13,7 @@ public class RoomTemplates : MonoBehaviour
     public GameObject closedRoom;
     public List<GameObject> rooms;
 
-    public int numRooms = 12;
+    public int numRooms = gameManager.Instance.depth;
 
     //Values for the last room 
     public float waitTime;

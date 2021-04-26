@@ -25,6 +25,6 @@ public class gameManager : MonoBehaviour
     #endregion
     // Start is called before the first frame update
 
-    public int seed;
+    public int depth = 10;
 
 }
