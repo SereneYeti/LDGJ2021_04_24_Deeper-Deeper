@@ -31,7 +31,7 @@ public class Destroy_Create : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //Debug.Log("is anyone out there!>!!?2");        
-        if (collision.gameObject.CompareTag("Rooms"))
+        if (collision.gameObject.CompareTag("Rooms")|| collision.gameObject.CompareTag("Lava"))
         {
             Destroy(collision.gameObject);
             //Instantiate(door, this.transform.position, Quaternion.identity);

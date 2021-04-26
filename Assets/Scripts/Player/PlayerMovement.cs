@@ -39,7 +39,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody>();   
+        rb = GetComponent<Rigidbody>();
+        transform.SetPositionAndRotation(new Vector3(0, 1, 0), Quaternion.identity);
     }
     // Update is called once per frame
     void Update()

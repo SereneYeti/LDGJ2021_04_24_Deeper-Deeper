@@ -43,3 +43,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67e28c524f4382b428a5c57b34b882da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  entryRoom: {fileID: 0}
+  TopRooms: []
+  BottomRooms: []
+  RightRooms: []
+  LeftRooms: []
+  obstacles: []
+  closedRoom: {fileID: 0}
+  rooms: []
+  numRooms: 12
+  waitTime: 0
+  spawnedStairs: 0
+  stairs: {fileID: 0}
