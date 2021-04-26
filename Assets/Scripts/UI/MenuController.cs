@@ -8,8 +8,7 @@ using System;
 
 public class MenuController : MonoBehaviour
 {
-    public Button btnBack;
-    public TextMeshProUGUI txtBack;
+  
     #region MainMenuButtons
     public Button btnPlay;
     public TextMeshProUGUI txtPlay;
@@ -17,11 +16,7 @@ public class MenuController : MonoBehaviour
     public TextMeshProUGUI txtQuit;   
     public Button btnInstructions;
     public TextMeshProUGUI txtInstructions;   
-    #endregion    
-    #region Instructions Buttons
     public TextMeshProUGUI txtInstructionsMessage;
-    #endregion
-    #region Settings Buttons
     public Slider seedSlider;
     public TextMeshProUGUI seedText;
     #endregion
@@ -31,7 +26,6 @@ public class MenuController : MonoBehaviour
         btnPlay.onClick.AddListener(this.PlayGame);
         btnQuit.onClick.AddListener(this.QuitGame);
         btnInstructions.onClick.AddListener(this.ShowInstructions);
-        btnBack.onClick.AddListener(this.Back);
         //btnViewHighScore.onClick.AddListener(this.DisplayScores);
         Back();
         SetVisibility(true, 0);
@@ -85,12 +79,12 @@ public class MenuController : MonoBehaviour
                     btnPlay.gameObject.SetActive(vis);
                     btnQuit.gameObject.SetActive(vis);
                     btnInstructions.gameObject.SetActive(vis);
+                    txtInstructionsMessage.gameObject.SetActive(vis);
                     break;
                 }
           
             case 2:
                 {  //Instructions
-                    txtInstructionsMessage.gameObject.SetActive(vis);
                     break;
                 }             
         }
