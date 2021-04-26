@@ -21,6 +21,10 @@ public class MenuController : MonoBehaviour
     #region Instructions Buttons
     public TextMeshProUGUI txtInstructionsMessage;
     #endregion
+    #region Settings Buttons
+    public Slider seedSlider;
+    public TextMeshProUGUI seedText;
+    #endregion
     // Start is called before the first frame update
     void Start()
     {
@@ -42,8 +46,12 @@ public class MenuController : MonoBehaviour
         Cursor.visible = true;
         SetVisibility(true, 4);
         
-    }    
-   
+    }
+    private void Update()
+    {
+        seedText.text = "Seed: " + Mathf.RoundToInt(seedSlider.value);
+
+    }
     void Back()
     {
         SetVisibility(true, 0);
