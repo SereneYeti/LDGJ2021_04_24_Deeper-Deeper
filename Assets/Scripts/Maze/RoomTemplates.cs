@@ -12,8 +12,8 @@ public class RoomTemplates : MonoBehaviour
 
     public GameObject closedRoom;
     public List<GameObject> rooms;
-
-    public int numRooms = 12;
+    
+    public int numRooms = 10;
 
     //Values for the last room 
     public float waitTime;
@@ -23,6 +23,7 @@ public class RoomTemplates : MonoBehaviour
     private void Start()
     {
         //Debug.Log("test");
+
         Invoke("CreateStairs", 2f);
     }
 
@@ -37,7 +38,7 @@ public class RoomTemplates : MonoBehaviour
         //Debug.Log(waitTime);
         if (spawnedStairs == false)
         {
-            Debug.Log("I Did it!");
+            //Debug.Log("I Did it!");
             for (int i = 0; i < rooms.Count; i++)
             {
                 if (i == rooms.Count-1)

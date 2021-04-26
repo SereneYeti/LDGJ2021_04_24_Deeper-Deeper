@@ -130,7 +130,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6288249276828111528, guid: 8b3e5fde6203d674e893c92958b9c282, type: 3}
       propertyPath: m_Name
-      value: FirstPersonPlayer
+      value: FirstPersonPlayer Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6288249276828111542, guid: 8b3e5fde6203d674e893c92958b9c282, type: 3}
       propertyPath: m_RootOrder
@@ -175,6 +175,22 @@ PrefabInstance:
     - target: {fileID: 6288249276828111542, guid: 8b3e5fde6203d674e893c92958b9c282, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6288249276828111543, guid: 8b3e5fde6203d674e893c92958b9c282, type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6288249276828111543, guid: 8b3e5fde6203d674e893c92958b9c282, type: 3}
+      propertyPath: walkspeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6288249276828111543, guid: 8b3e5fde6203d674e893c92958b9c282, type: 3}
+      propertyPath: sprintSpeed
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 6288249276828111543, guid: 8b3e5fde6203d674e893c92958b9c282, type: 3}
+      propertyPath: sprintingSpeed
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 6288249277262582010, guid: 8b3e5fde6203d674e893c92958b9c282, type: 3}
       propertyPath: mouseSensitivity

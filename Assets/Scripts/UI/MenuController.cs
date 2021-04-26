@@ -8,8 +8,7 @@ using System;
 
 public class MenuController : MonoBehaviour
 {
-    public Button btnBack;
-    public TextMeshProUGUI txtBack;
+  
     #region MainMenuButtons
     public Button btnPlay;
     public TextMeshProUGUI txtPlay;
@@ -17,9 +16,9 @@ public class MenuController : MonoBehaviour
     public TextMeshProUGUI txtQuit;   
     public Button btnInstructions;
     public TextMeshProUGUI txtInstructions;   
-    #endregion    
-    #region Instructions Buttons
     public TextMeshProUGUI txtInstructionsMessage;
+    public Slider seedSlider;
+    public TextMeshProUGUI seedText;
     #endregion
     // Start is called before the first frame update
     void Start()
@@ -27,7 +26,6 @@ public class MenuController : MonoBehaviour
         btnPlay.onClick.AddListener(this.PlayGame);
         btnQuit.onClick.AddListener(this.QuitGame);
         btnInstructions.onClick.AddListener(this.ShowInstructions);
-        btnBack.onClick.AddListener(this.Back);
         //btnViewHighScore.onClick.AddListener(this.DisplayScores);
         Back();
         SetVisibility(true, 0);
@@ -42,8 +40,12 @@ public class MenuController : MonoBehaviour
         Cursor.visible = true;
         SetVisibility(true, 4);
         
-    }    
-   
+    }
+    private void Update()
+    {
+        seedText.text = "Depth: " + Mathf.RoundToInt(seedSlider.value);
+
+    }
     void Back()
     {
         SetVisibility(true, 0);
@@ -52,7 +54,8 @@ public class MenuController : MonoBehaviour
     }
     public void PlayGame()
     {          
-        Debug.Log("HI");
+        //Debug.Log("HI");
+        gameManager.Instance.depth = Mathf.RoundToInt(seedSlider.value);
         SceneManager.LoadScene(1);     
     }
     public void QuitGame()
@@ -76,12 +79,12 @@ public class MenuController : MonoBehaviour
                     btnPlay.gameObject.SetActive(vis);
                     btnQuit.gameObject.SetActive(vis);
                     btnInstructions.gameObject.SetActive(vis);
+                    txtInstructionsMessage.gameObject.SetActive(vis);
                     break;
                 }
           
             case 2:
                 {  //Instructions
-                    txtInstructionsMessage.gameObject.SetActive(vis);
                     break;
                 }             
         }
