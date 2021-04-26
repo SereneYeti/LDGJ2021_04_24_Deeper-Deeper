@@ -4,28 +4,36 @@ using UnityEngine;
 
 public class LerpMovement : MonoBehaviour
 {
-    public Rigidbody wall;
+     Rigidbody wall;
 
-    public Shader shaderShift;
-    public Vector3 endPos;
-    public Vector3 startPos;
+    public Renderer disRenderer;
+    float targetDissolve = 100f;
+    public float currentDislove = 1f;
+
+     Vector3 endPos;
+    Vector3 startPos;
     private float distance = 30f;
     public float lerpTime = 5f;
-    private float currentlerpTime = 0;
+    public float currentlerpTime = 0;
     private bool keyhit = false;
-    public string startPosn;
-    public string endPosn;
+    string startPosn;
+    string endPosn;
 
 
     private void Start()
     {
-        startPos = GameObject.Find("movPos00").transform.position;
-        endPos = GameObject.Find("movPos01").transform.position + Vector3.right * distance;
+        
+      
     }
 
     private void Update()
     {
-       // MovingObjects();
+        // MovingObjects();
+    
+    }
+    private void FixedUpdate()
+    {
+       // shiftColor();
     }
 
     public void MovingObjects()
@@ -37,6 +45,39 @@ public class LerpMovement : MonoBehaviour
         }
 
         float perc = currentlerpTime / lerpTime;
+        
         wall.transform.position = Vector3.Lerp(startPos, endPos, perc);
     }
+
+
+    public void shiftColor()
+    {
+        currentlerpTime += Time.deltaTime;
+
+        currentDislove = Mathf.Lerp(currentDislove, targetDissolve, 2f * Time.deltaTime);
+        disRenderer.material.SetFloat("_CutoffHeight", currentDislove);
+
+        if (currentlerpTime >= lerpTime)
+        {
+            targetDissolve += 0.0001f;
+            currentlerpTime = lerpTime;
+            Debug.Log(Time.deltaTime.ToString());        
+        }
+
+        else if (currentDislove >= 1f)
+        {
+             targetDissolve= -1f;
+
+        }
+        else if (currentDislove <= -1f)
+        {
+
+            targetDissolve = 1f;
+            
+        }
+
+
+
+    }
+    
 }
