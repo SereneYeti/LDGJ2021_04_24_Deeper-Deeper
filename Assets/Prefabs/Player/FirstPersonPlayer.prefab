@@ -48,12 +48,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e3d9d0a1d4498c4b9fa1284fee0045d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
   gravity: -9.81
   speed: 5
   walkspeed: 7
   sprintSpeed: 78
-  sprintingSpeed: 12
+  sprintingSpeed: 100
   jumpHeight: 8
   startTime: 0
   fallMultiplier: 2.5
