@@ -23,8 +23,14 @@ public class SpawnObstacleRooms : MonoBehaviour
                 GameObject go = g.gameObject.transform.Find("DoorTrigger").gameObject;
                 Destroy(go);
                 Instantiate(templates.obstacles[rnd], g.transform.position, Quaternion.identity);
+                //GameEvents.Instance.DoorActivate(g.name, g.transform.position);
                 templates.numRooms = 20;
             }
         }
    }
+
+    private void OnDestroy()
+    {
+        GameEvents.Instance.onSpawnObstacles -= SpawnObsRooms;
+    }
 }
