@@ -43,7 +43,7 @@ public class MenuController : MonoBehaviour
     }
     private void Update()
     {
-        seedText.text = "Depth: " + Mathf.RoundToInt(seedSlider.value);
+        seedText.text = Convert.ToString(Mathf.RoundToInt(seedSlider.value));
 
     }
     void Back()
