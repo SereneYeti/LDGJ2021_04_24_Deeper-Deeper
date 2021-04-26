@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ba6e6b53477014c902bd8cc50bc6e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seed: 0
+  depth: 10
 --- !u!4 &101094834
 Transform:
   m_ObjectHideFlags: 0
@@ -452,7 +452,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5245112852099867723, guid: 58b1d9ac4fd59cb4aa6de04222030724, type: 3}
       propertyPath: m_MinValue
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5829840593922306377, guid: 58b1d9ac4fd59cb4aa6de04222030724, type: 3}
       propertyPath: m_AnchorMax.x
@@ -465,6 +465,16 @@ PrefabInstance:
     - target: {fileID: 5829840593922306377, guid: 58b1d9ac4fd59cb4aa6de04222030724, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6722935694834901440, guid: 58b1d9ac4fd59cb4aa6de04222030724, type: 3}
+      propertyPath: m_text
+      value: 'Depth
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6722935694834901440, guid: 58b1d9ac4fd59cb4aa6de04222030724, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7231050205021442029, guid: 58b1d9ac4fd59cb4aa6de04222030724, type: 3}
       propertyPath: m_sharedMaterial
@@ -565,6 +575,14 @@ PrefabInstance:
     - target: {fileID: 7231050206661376735, guid: 58b1d9ac4fd59cb4aa6de04222030724, type: 3}
       propertyPath: m_Name
       value: Menu2.0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471550815651745423, guid: 58b1d9ac4fd59cb4aa6de04222030724, type: 3}
+      propertyPath: m_Name
+      value: tmp_txtDepth
+      objectReference: {fileID: 0}
+    - target: {fileID: 7941064954968141453, guid: 58b1d9ac4fd59cb4aa6de04222030724, type: 3}
+      propertyPath: m_Name
+      value: depthSlider
       objectReference: {fileID: 0}
     - target: {fileID: 8269868452927442740, guid: 58b1d9ac4fd59cb4aa6de04222030724, type: 3}
       propertyPath: m_AnchorMax.x

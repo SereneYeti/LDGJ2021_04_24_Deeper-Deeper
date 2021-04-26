@@ -27,4 +27,9 @@ public class gameManager : MonoBehaviour
 
     public int depth = 10;
 
+    private void Start()
+    {
+        //depth = 12;
+    }
+
 }

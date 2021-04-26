@@ -60,7 +60,7 @@ public class MenuController : MonoBehaviour
     }
     public void PlayGame()
     {          
-        Debug.Log("HI");
+        //Debug.Log("HI");
         gameManager.Instance.depth = Mathf.RoundToInt(seedSlider.value);
         SceneManager.LoadScene(1);     
     }

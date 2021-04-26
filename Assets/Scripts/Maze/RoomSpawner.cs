@@ -19,7 +19,9 @@ public class RoomSpawner : MonoBehaviour
     {
         Destroy(gameObject, 4f);       
         templates = GameObject.FindObjectOfType<RoomTemplates>();
+        
         templates.numRooms = gameManager.Instance.depth;
+        Debug.Log(gameManager.Instance.depth);
         if (!spawned)
             Invoke("Spawn", 0.1f);
     }
